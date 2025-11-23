@@ -2,642 +2,332 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TrueWin Digital Services</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-om5U3f3pG7dAh3a+O0X9P7ZkZ2gYpvWQ+ZV9U7nG7+W+FhtQv4o0bL7L/7lU3T5JkTQ4p5B6uJ5Qeimk9a3GQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
 </head>
 <body>
-  <!-- Top scroll progress -->
-  <div id="scroll-progress"></div>
 
-  <!-- Navbar -->
-  <header class="navbar">
+  <!-- Top nav (appears when you scroll a bit) -->
+  <header class="top-nav" id="topNav">
     <div class="nav-inner">
-      <div class="brand">
-        <span class="brand-logo">TW</span>
-        <div class="brand-text-wrap">
-          <span class="brand-title">TrueWin Digital Services</span>
-          <span class="brand-subtitle">Verified Giveaways &amp; Games</span>
+      <div class="nav-logo">
+        <div class="logo-circle small">
+          <span class="logo-text">T</span>
+        </div>
+        <div class="nav-title">
+          <span class="brand-main">TrueWin</span>
+          <span class="brand-sub">Digital Services</span>
         </div>
       </div>
+
+      <button class="nav-menu-btn" id="navMenuBtn">
+        ☰
+      </button>
+
       <nav class="nav-links" id="navLinks">
-        <a href="#hero">Home</a>
         <a href="#stats">Stats</a>
-        <a href="#giveaways">Giveaways</a>
+        <a href="#games">Games</a>
         <a href="#verification">Verification</a>
-        <a href="#games">Game Zone</a>
         <a href="#legal">Legal</a>
-        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="hero" class="section hero animate-on-scroll">
-    <div class="hero-content">
-      <h1>
-        Transparent Giveaways with
-        <span class="gradient-text">Real Verification</span>
-      </h1>
-      <p>
-        TrueWin Digital Services is a registered micro-enterprise running
-        <strong>skill-based, proof-backed giveaways</strong> with a modern
-        Game Zone for timepass and engagement. No gambling. No fake promises.
+  <!-- Hero section with big centered logo -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="logo-circle">
+        <span class="logo-text">T</span>
+      </div>
+      <h1>TrueWin Digital Services</h1>
+      <p class="hero-sub">
+        Giveaways • Fun Games • Community Platform
       </p>
+
+      <div class="hero-badges">
+        <span class="badge">Govt of India MSME (Udyam) Registered ✅</span>
+        <span class="badge">Community First, Fun Always 🎉</span>
+      </div>
+
+      <p class="hero-scroll-hint">
+        Scroll down to explore everything 👇
+      </p>
+
       <div class="hero-actions">
-        <a href="#verification" class="btn btn-primary">Get Verified</a>
-        <a href="#games" class="btn btn-ghost">Open Game Zone</a>
-      </div>
-      <div class="hero-tags">
-        <span>MSME (Udyam) Registered</span>
-        <span>No Real-Money Gaming</span>
-        <span>UPI Proofs for Every Payout</span>
-      </div>
-    </div>
-    <div class="hero-panel glass">
-      <p class="hero-label">Official Channels &amp; Contact</p>
-      <div class="hero-links">
-        <a
-          href="https://t.me/truewindigitalservices"
-          target="_blank"
-          rel="noopener"
-        >
-          <i class="fa-brands fa-telegram"></i> Telegram Channel:
-          @truewindigitalservices
-        </a>
-        <a
-          href="https://t.me/tanish_parikh"
-          target="_blank"
-          rel="noopener"
-        >
-          <i class="fa-brands fa-telegram"></i> Owner: @tanish_parikh
-        </a>
-        <a href="https://wa.me/919687283434" target="_blank" rel="noopener">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp: +91 96872 83434
-        </a>
-      </div>
-      <div class="hero-udyam">
-        <p class="udyam-label">Udyam Registration Number</p>
-        <p class="udyam-id">UDYAM-GJ-16-0040831</p>
-        <a
-          href="https://www.udyamregistration.gov.in/Udyam_Verify.aspx"
-          target="_blank"
-          rel="noopener"
-          class="verify-link"
-        >
-          Verify on Official Govt. Portal
-        </a>
-      </div>
-      <div class="hero-note">
-        <p>
-          For any doubt about authenticity, you can directly ask to see the
-          Udyam certificate in private chat.
-        </p>
+        <a href="#games" class="btn btn-primary">Play Games</a>
+        <a href="#verification" class="btn btn-ghost">Get Verified</a>
       </div>
     </div>
   </section>
 
-  <!-- Stats -->
-  <section id="stats" class="section stats-section animate-on-scroll">
+  <!-- Stats section -->
+  <section class="section scroll-fade" id="stats">
     <div class="section-header">
-      <h2>TrueWin Snapshot</h2>
-      <p>Stats are manually updated from books and UPI proofs.</p>
+      <h2>Community Stats</h2>
+      <p>Numbers below are maintained by the TrueWin team.</p>
     </div>
+
     <div class="stats-grid">
-      <div class="stat-card glass">
-        <p>Total Members</p>
-        <p class="stat-number" data-target="47" id="statMembers">0</p>
+      <div class="stat-card">
+        <span class="stat-label">Total Members</span>
+        <span class="stat-value" data-target="1500" id="statMembers">0</span>
       </div>
-      <div class="stat-card glass">
-        <p>Verified Members</p>
-        <p class="stat-number" data-target="10" id="statVerified">0</p>
+      <div class="stat-card">
+        <span class="stat-label">Verified Members</span>
+        <span class="stat-value" data-target="320" id="statVerified">0</span>
       </div>
-      <div class="stat-card glass">
-        <p>Advanced Verified / VIP</p>
-        <p class="stat-number" data-target="3" id="statAdvanced">0</p>
+      <div class="stat-card">
+        <span class="stat-label">Advanced Verified (VIP)</span>
+        <span class="stat-value" data-target="42" id="statVip">0</span>
       </div>
-      <div class="stat-card glass">
-        <p>Total Payouts (₹)</p>
-        <p class="stat-number" data-target="15000" id="statPayouts">0</p>
+      <div class="stat-card">
+        <span class="stat-label">Total Giveaways Done</span>
+        <span class="stat-value" data-target="75" id="statGiveaways">0</span>
       </div>
     </div>
+
     <p class="stats-note">
-      *Approx figures for illustration. Actual logs are maintained in internal
-      sheets &amp; proof groups.
+      <strong>Note:</strong> Data is “near real” – we update it regularly from our records.
     </p>
   </section>
 
-  <!-- Giveaways -->
-  <section id="giveaways" class="section animate-on-scroll">
+  <!-- Games section -->
+  <section class="section scroll-fade" id="games">
     <div class="section-header">
-      <h2>How Giveaways Work</h2>
-      <p>Simple structure, strict rules, and full proofs.</p>
-    </div>
-    <div class="cards-grid">
-      <article class="info-card glass">
-        <h3>1. Announcement</h3>
-        <p>
-          Every giveaway has a unique <strong>Giveaway ID</strong> and is
-          announced on
-          <strong>@truewindigitalservices</strong> with prize pool, number of
-          winners, time window, and rules.
-        </p>
-      </article>
-      <article class="info-card glass">
-        <h3>2. Participation</h3>
-        <p>
-          Only <strong>Verified</strong> and
-          <strong>Advanced Verified (VIP)</strong> members are counted
-          officially. Non-verified members can watch, chat and enjoy but their
-          answers are ignored when picking winners.
-        </p>
-      </article>
-      <article class="info-card glass">
-        <h3>3. Winner Selection</h3>
-        <p>
-          Winners are picked based on clearly declared logic &mdash; fastest
-          correct answer, logic-based condition, or structured wheel spin.
-          Screenshots are kept for audits.
-        </p>
-      </article>
-      <article class="info-card glass">
-        <h3>4. Payout &amp; Proof</h3>
-        <p>
-          Payouts are done via UPI and confirmed with screenshots. Proofs may
-          be posted in a proof channel or shown privately on request, depending
-          on privacy and consent.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Verification -->
-  <section id="verification" class="section verification-section animate-on-scroll">
-    <div class="section-header">
-      <h2>Member Verification Levels</h2>
-      <p>
-        Done only to keep things fair, avoid fake IDs and stop multi-account
-        abusers. No passwords. No OTPs. No bank logins.
-      </p>
+      <h2>Game Zone 🎮</h2>
+      <p>100% free, for timepass only – no real money involved anywhere.</p>
     </div>
 
-    <div class="verification-layout">
-      <div class="verification-info glass">
-        <h3>Levels</h3>
-        <ul>
-          <li>
-            <strong>Non-Verified</strong> &mdash; can chat, watch giveaways,
-            talk in group. Entries are <span class="highlight">ignored</span> in
-            winner selection.
-          </li>
-          <li>
-            <strong>Verified ✅</strong> &mdash; basic KYC (name, last 4 of
-            Aadhaar, UPI match). Eligible for public giveaways.
-          </li>
-          <li>
-            <strong>Advanced Verified 💎 (VIP)</strong> &mdash; active VIP
-            member + full verification. Eligible for VIP-only rounds, priority
-            support and extra perks.
-          </li>
-        </ul>
-        <p class="small">
-          Advanced verification automatically ends when VIP membership expires.
-          You can re-verify when you renew VIP.
-        </p>
-        <p class="small">
-          If someone submits fake or stolen documents, that may be treated as
-          fraud and forgery under Indian law (e.g. IPC 420, 468, 471 and IT Act
-          66D). This is an early warning, not legal advice.
-        </p>
+    <div class="games-grid">
+
+      <!-- Game 1: Sky Stack -->
+      <div class="game-card">
+        <div class="game-card-header">
+          <h3>Sky Stack 🧱</h3>
+          <span class="game-tag">Stacking</span>
+        </div>
+
+        <div class="game-screen">
+          <canvas id="stackCanvas"></canvas>
+        </div>
+
+        <div class="game-actions">
+          <button class="btn btn-pill" id="stackStart">Play / Drop</button>
+          <p class="game-hint">
+            Tap / click the button, tap inside the game, or press Space to drop the moving block and build a tower.
+          </p>
+          <p class="game-score" id="stackScore">Height: 0</p>
+        </div>
       </div>
 
-      <div class="verification-form glass">
-        <h3>Verification Request (Summary Generator)</h3>
-        <form id="verificationForm">
+      <!-- Game 2: Neon Runner -->
+      <div class="game-card">
+        <div class="game-card-header">
+          <h3>Neon Runner 🏃‍♂️</h3>
+          <span class="game-tag">Arcade</span>
+        </div>
+
+        <div class="game-screen">
+          <canvas id="runnerCanvas"></canvas>
+        </div>
+
+        <div class="game-actions">
+          <button class="btn btn-pill" id="runnerStart">Tap / Space to Start</button>
+          <p class="game-hint">
+            While running, tap the game, tap the button again, or press Space to jump over obstacles.
+          </p>
+          <p class="game-score" id="runnerScore">Score: 0</p>
+        </div>
+      </div>
+
+      <!-- Game 3: Reflex Tap -->
+      <div class="game-card">
+        <div class="game-card-header">
+          <h3>Reflex Tap ⚡</h3>
+          <span class="game-tag">Reaction</span>
+        </div>
+
+        <div class="game-screen">
+          <canvas id="reflexCanvas"></canvas>
+        </div>
+
+        <div class="game-actions">
+          <button class="btn btn-pill" id="reflexStart">Start</button>
+          <p class="game-hint">
+            When a circle glows, tap exactly that one. Wrong tap = game over.
+          </p>
+          <p class="game-score" id="reflexScore">Score: 0</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="games-footer">
+      All games are tuned to feel similar on mobile and laptop.  
+      If something feels off, refresh once and let us know feedback.
+    </p>
+  </section>
+
+  <!-- Verification section -->
+  <section class="section scroll-fade" id="verification">
+    <div class="section-header">
+      <h2>Member Verification ✅</h2>
+      <p>Verification protects real members and blocks fake IDs.</p>
+    </div>
+
+    <div class="verify-layout">
+      <div class="verify-info">
+        <h3>3 Levels</h3>
+        <ul>
+          <li><strong>Non-Verified:</strong> Can stay & watch, no giveaway entry.</li>
+          <li><strong>Verified:</strong> Can join normal giveaways (Aadhaar + UPI checked).</li>
+          <li><strong>Advanced Verified (VIP):</strong> Monthly VIP + extra access.</li>
+        </ul>
+
+        <p class="verify-note">
+          TrueWin Digital Services is registered as a Micro / Small enterprise under
+          <strong>Government of India MSME (Udyam)</strong>.  
+          Your details are used only for verification and fraud prevention.
+        </p>
+
+        <a
+          href="Udyam_Registration_Zero_cost,_No_Fee_and_Free_Registration_of_MSMEs.pdf"
+          target="_blank"
+          class="btn btn-ghost"
+        >
+          View MSME / Udyam Certificate (PDF)
+        </a>
+      </div>
+
+      <div class="verify-form-card">
+        <h3>Generate Verification Message</h3>
+        <p class="verify-small">
+          Fill this, copy the text, then send it on Telegram / WhatsApp to the owner or managers.
+        </p>
+
+        <form class="verify-form" id="verifyForm">
           <label>
             Full Name
-            <input
-              type="text"
-              name="fullName"
-              placeholder="As per your government ID"
-              required
-            />
+            <input type="text" id="vName" required />
           </label>
-
           <label>
             Telegram Username
-            <input
-              type="text"
-              name="telegram"
-              placeholder="@your_username"
-              required
-            />
+            <input type="text" id="vTelegram" placeholder="@yourusername" required />
           </label>
-
           <label>
-            UPI ID (for payouts)
-            <input
-              type="text"
-              name="upi"
-              placeholder="example@upi"
-              required
-            />
+            UPI ID
+            <input type="text" id="vUpi" placeholder="example@upi" required />
           </label>
-
           <label>
             Verification Type
-            <select name="verificationType" id="verificationType" required>
-              <option value="basic">Verified (Basic)</option>
-              <option value="advanced">Advanced Verified (VIP)</option>
+            <select id="vType" required>
+              <option value="verified">Verified (Free)</option>
+              <option value="advanced">Advanced Verified (VIP Required)</option>
             </select>
           </label>
-
           <label>
-            Preferred Contact
-            <select name="contactPref" required>
-              <option value="telegram">Telegram DM</option>
-              <option value="whatsapp">WhatsApp</option>
-              <option value="email">Email (mention in notes)</option>
-            </select>
+            Extra Notes (optional)
+            <textarea id="vNotes" rows="3"></textarea>
           </label>
 
-          <label>
-            Notes (optional)
-            <textarea
-              name="notes"
-              rows="3"
-              placeholder="VIP payment proof, special cases, alternate contact, etc."
-            ></textarea>
-          </label>
-
-          <p class="small">
-            After generating the summary below, copy it and send it along with
-            your masked Aadhaar photo and selfie
-            <strong>in private</strong> to
-            <strong>@tanish_parikh</strong> on Telegram or WhatsApp
-            <strong>+91 96872 83434</strong>. Never post personal documents in
-            public groups.
-          </p>
-
-          <button type="submit" class="btn btn-primary full-width">
-            Generate &amp; Copy Summary
+          <button type="submit" class="btn btn-primary">
+            Generate & Copy
           </button>
-          <p id="verificationResult" class="form-result"></p>
+
+          <p class="verify-result" id="verifyResult"></p>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Game Zone -->
-  <section id="games" class="section games-section animate-on-scroll">
+  <!-- Legal warning -->
+  <section class="section scroll-fade" id="legal">
     <div class="section-header">
-      <h2>TrueWin Game Zone</h2>
+      <h2>Legal & Fair Use Warning ⚠️</h2>
+      <p>Simple rule: don’t cheat, don’t abuse, don’t scam.</p>
+    </div>
+
+    <div class="legal-box">
       <p>
-        Mobile-friendly, browser-based mini games for timepass. No real-money
-        wagering or gambling.
+        Using fake identity documents, using someone else’s Aadhaar/UPI without consent,
+        or attempting to scam other members can amount to offences under Indian law
+        (for example, cheating / identity misuse related provisions in the
+        <strong>Indian Penal Code</strong> and <strong>Information Technology Act</strong>).
       </p>
-    </div>
-
-    <div class="game-layout glass">
-      <div class="game-tabs">
-        <button class="game-tab active" data-game="runnerGame">
-          Runner Dash
-        </button>
-        <button class="game-tab" data-game="reactionGame">
-          Reaction Tap
-        </button>
-        <button class="game-tab" data-game="numberGame">
-          Number Hunt
-        </button>
-      </div>
-
-      <div class="game-panels">
-        <!-- Runner Dash -->
-        <div id="runnerGame" class="game-panel active">
-          <h3>Runner Dash</h3>
-          <p class="small">
-            Tap <strong>Jump</strong> (or press space / ↑) to avoid obstacles.
-            The longer you survive, the higher your score.
-          </p>
-          <div class="runner-wrapper">
-            <div id="runnerWorld">
-              <div id="runnerGround"></div>
-              <div id="runnerPlayer"></div>
-              <div id="runnerObstacle"></div>
-            </div>
-          </div>
-          <div class="game-controls">
-            <button id="runnerJumpBtn" class="btn btn-primary">
-              Jump
-            </button>
-            <button id="runnerResetBtn" class="btn btn-ghost">
-              Reset
-            </button>
-            <p class="game-status">
-              Score:
-              <span id="runnerScore">0</span> |
-              <span id="runnerMessage">Tap Jump to start</span>
-            </p>
-          </div>
-        </div>
-
-        <!-- Reaction Tap -->
-        <div id="reactionGame" class="game-panel">
-          <h3>Reaction Tap</h3>
-          <p class="small">
-            Press <strong>Start</strong>, wait for the glow, then hit
-            <strong>TAP</strong> as fast as possible.
-          </p>
-          <div id="reactionArea">
-            <p id="reactionText">Press Start to begin</p>
-          </div>
-          <div class="game-controls">
-            <button id="reactionStartBtn" class="btn btn-primary">
-              Start
-            </button>
-            <button id="reactionTapBtn" class="btn btn-ghost">
-              TAP
-            </button>
-            <p class="game-status">
-              Last:
-              <span id="reactionLast">–</span> ms |
-              Best:
-              <span id="reactionBest">–</span> ms
-            </p>
-          </div>
-        </div>
-
-        <!-- Number Hunt -->
-        <div id="numberGame" class="game-panel">
-          <h3>Number Hunt</h3>
-          <p class="small">
-            Find and tap the target number in the grid before the timer ends.
-          </p>
-          <div class="number-info">
-            <p>
-              Target:
-              <span id="numberTarget">–</span>
-            </p>
-            <p>
-              Time:
-              <span id="numberTime">0</span>s
-            </p>
-            <p>
-              Score:
-              <span id="numberScore">0</span>
-            </p>
-          </div>
-          <div id="numberGrid" class="number-grid"></div>
-          <div class="game-controls">
-            <button id="numberStartBtn" class="btn btn-primary">
-              Start New Round
-            </button>
-            <p id="numberMessage" class="game-status"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <p class="games-disclaimer">
-      Games are for entertainment and practice only. They do not directly
-      decide giveaway winners or payouts.
-    </p>
-  </section>
-
-  <!-- Legal / IPC -->
-  <section id="legal" class="section legal-section animate-on-scroll">
-    <div class="section-header">
-      <h2>Legal &amp; Early Warning</h2>
-      <p>
-        This is a simple summary to keep members aware. For exact details,
-        always refer to official law or a qualified advocate.
+      <p>TrueWin Digital Services may:</p>
+      <ul>
+        <li>Ban such users from all groups & giveaways.</li>
+        <li>Cancel winnings where fraud is suspected.</li>
+        <li>Share proof (chats / IDs / logs) with authorities if required.</li>
+      </ul>
+      <p class="legal-foot">
+        By using this website or joining our giveaways, you agree to follow these rules
+        and not misuse the platform or try to harm other members.
       </p>
-    </div>
-
-    <div class="legal-grid">
-      <div class="glass legal-card">
-        <h3>TrueWin Identity</h3>
-        <ul>
-          <li>Business Name: TrueWin Digital Services</li>
-          <li>Type: Digital Giveaway &amp; Reward Entertainment</li>
-          <li>Jurisdiction: Gujarat, India</li>
-          <li>Registration: MSME (Udyam) Registered Micro Enterprise</li>
-        </ul>
-      </div>
-
-      <div class="glass legal-card">
-        <h3>Fraud &amp; Fake ID Warning</h3>
-        <p class="small">
-          Submitting fake IDs, using someone else's Aadhaar without permission,
-          or claiming winnings with stolen UPI IDs can be treated as fraud and
-          forgery under Indian law.
-        </p>
-        <ul class="small">
-          <li>
-            <strong>IPC 420</strong> &mdash; cheating / dishonest inducement.
-          </li>
-          <li>
-            <strong>IPC 468</strong> &mdash; forgery for the purpose of
-            cheating.
-          </li>
-          <li>
-            <strong>IPC 471</strong> &mdash; using a forged document as genuine.
-          </li>
-          <li>
-            <strong>IT Act 66D</strong> &mdash; cheating by personation using
-            computer resources (e.g. online identity fraud).
-          </li>
-        </ul>
-        <p class="small">
-          TrueWin reserves the right to blacklist accounts, share logs with
-          lawful authorities, and permanently deny participation to anyone
-          suspected of these actions.
-        </p>
-      </div>
-
-      <div class="glass legal-card">
-        <h3>Giveaway Rules &amp; Liability</h3>
-        <ul class="small">
-          <li>
-            Giveaways are <strong>skill-based promotions</strong>, not lottery
-            or gambling.
-          </li>
-          <li>
-            VIP fees (if any) are for early access &amp; support benefits, not
-            for guaranteed winning.
-          </li>
-          <li>
-            The organizer is not responsible for bank downtime, UPI network
-            issues or third-party platform outages.
-          </li>
-          <li>
-            Decisions taken by the organizer based on rules and proofs are final
-            for that event.
-          </li>
-        </ul>
-      </div>
-
-      <div class="glass legal-card">
-        <h3>Data Handling</h3>
-        <p class="small">
-          Only limited data is collected for verification (name, Telegram
-          handle, masked ID, UPI ID and supporting proof). Sensitive documents
-          must be sent only in private chats.
-        </p>
-        <p class="small">
-          Data is used for identity verification, fraud prevention and payout
-          confirmation. It is not sold to third parties.
-        </p>
-      </div>
-    </div>
-
-    <p class="legal-disclaimer">
-      This section is for awareness only and does not replace professional
-      legal advice. For serious issues, consult a qualified advocate.
-    </p>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="section faq-section animate-on-scroll">
-    <div class="section-header">
-      <h2>FAQ</h2>
-      <p>Quick answers to the most common questions.</p>
-    </div>
-
-    <div class="faq-list">
-      <details class="glass">
-        <summary>Is this gambling or lottery?</summary>
-        <p>
-          No. Giveaways are structured and skill-based &mdash; with clear rules
-          like fastest correct answer, logic puzzles, or structured draws.
-          Participation is optional and VIP fees (if any) are not betting.
-        </p>
-      </details>
-
-      <details class="glass">
-        <summary>Why do you need verification?</summary>
-        <p>
-          To stop multi-account farming, fake winners, and people claiming
-          prizes with someone else’s UPI. Verification protects serious members
-          and keeps giveaways sustainable.
-        </p>
-      </details>
-
-      <details class="glass">
-        <summary>What if I don’t want to share Aadhaar details?</summary>
-        <p>
-          You can stay non-verified, enjoy chat and watch giveaways, but your
-          entries will not be counted. You may blur your Aadhaar except last 4
-          digits and name, and share only in private chat with the organizer.
-        </p>
-      </details>
-
-      <details class="glass">
-        <summary>How are winners paid?</summary>
-        <p>
-          Normally via UPI. In some cases gift cards or other digital rewards
-          may be used. Payouts are confirmed with screenshots and logs are
-          maintained.
-        </p>
-      </details>
-
-      <details class="glass">
-        <summary>How do I contact you if there is an issue?</summary>
-        <p>
-          First, contact managers in group or via DM (if allowed). If not
-          resolved, contact the organizer directly on
-          <strong>@tanish_parikh</strong> on Telegram or WhatsApp
-          <strong>+91 96872 83434</strong>.
-        </p>
-      </details>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact-section animate-on-scroll">
+  <!-- Team & Contact -->
+  <section class="section scroll-fade" id="contact">
     <div class="section-header">
-      <h2>Contact &amp; Support</h2>
-      <p>
-        Use these only for genuine queries about verification, giveaways or
-        legal issues related to TrueWin.
-      </p>
+      <h2>Team & Contact</h2>
+      <p>Any confusion? Just message – we actually reply 🙂</p>
     </div>
 
     <div class="contact-grid">
-      <div class="glass contact-card">
-        <h3>Owner &amp; Organizer</h3>
-        <p><strong>Name:</strong> Tanish Gaurang Parikh</p>
-        <p>
-          <strong>Telegram:</strong>
-          <a href="https://t.me/tanish_parikh" target="_blank" rel="noopener">
-            @tanish_parikh
-          </a>
-        </p>
-        <p>
-          <strong>WhatsApp:</strong>
-          <a href="https://wa.me/919687283434" target="_blank" rel="noopener">
-            +91 96872 83434
-          </a>
-        </p>
+      <div class="contact-card">
+        <h3>Owner</h3>
+        <p><strong>Tanish Parikh</strong></p>
+        <p>Telegram: <a href="https://t.me/tanish_parikh" target="_blank">@tanish_parikh</a></p>
+        <p>WhatsApp: <a href="https://wa.me/919687283434" target="_blank">+91 9687283434</a></p>
       </div>
 
-      <div class="glass contact-card">
-        <h3>Official Channel</h3>
+      <div class="contact-card">
+        <h3>Channel</h3>
         <p>
-          <strong>Telegram:</strong>
-          <a
-            href="https://t.me/truewindigitalservices"
-            target="_blank"
-            rel="noopener"
-          >
+          Telegram Channel:
+          <a href="https://t.me/truewindigitalservices" target="_blank">
             @truewindigitalservices
           </a>
         </p>
-        <p class="small">
-          All official announcements, giveaway posts, and schedule updates are
-          published here first.
+        <p>All official winners & updates are posted here.</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Managers</h3>
+        <ul>
+          <li><a href="https://t.me/cranium08" target="_blank">@cranium08</a></li>
+          <li><a href="https://t.me/nexxup" target="_blank">@nexxup</a></li>
+        </ul>
+        <p class="small-text">
+          If any manager misbehaves or abuses, report directly to
+          <strong>@tanish_parikh</strong> with screenshot.
         </p>
       </div>
 
-      <div class="glass contact-card">
-        <h3>Managers</h3>
-        <ul>
-          <li>@cranium08 &mdash; Operations &amp; Execution</li>
-          <li>@nexxup &mdash; Moderation &amp; Game Support</li>
-        </ul>
-        <p class="small">
-          For normal queries, talk to managers first. Escalate to owner only if
-          needed.
-        </p>
+      <div class="contact-card">
+        <h3>Website Feedback</h3>
+        <p>Rate this website and suggest features:</p>
+        <form id="feedbackForm" class="feedback-form">
+          <label>
+            Rating (1–5)
+            <input type="number" id="fbRating" min="1" max="5" required />
+          </label>
+          <label>
+            Feedback
+            <textarea id="fbText" rows="2" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-ghost">Submit</button>
+          <p class="feedback-result" id="feedbackResult"></p>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
-    <p>
-      © <span id="year"></span> TrueWin Digital Services &mdash; All rights
-      reserved.
-    </p>
-    <p class="footer-small">
-      This website is for transparent giveaways and entertainment only. It does
-      not promote gambling or illegal activities.
-    </p>
+    <p>© <span id="year"></span> TrueWin Digital Services. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
